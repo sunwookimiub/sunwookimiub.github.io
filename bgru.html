@@ -1,6 +1,6 @@
 <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Deep Autotuner</title>
+    <title>Bitwise Recurrent Network</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="./css/maudio.css">
     <style type="text/css">
@@ -21,30 +21,22 @@
     <article class="grid-container">
         <div class="grid-x grid-padding-x align-center">
             <div class="cell">
-                <h1>
-                    Deep Autotuner: A data-driven approach to natural-sounding pitch correction for singing voice in karaoke performances
-                </h1>
+    <h1>
+        Incremental Binarization On Recurrent Neural Networks For Single-Channel Source Separation
+    </h1>
                 <p class="authors">
-                    Sanna Wager (Ph.D. candidate, Indiana University SICE),
-                    George Tzanetakis (University of Victoria, Department of Computer Science; Smule Inc.),
-                    Cheng-i Wang (Smule, Inc.), Lijiang Guo (Ph.D. candidate, Indiana University SICE),
-                    Aswin Sivaraman (Ph.D. student, Indiana University SICE),
-                    Minje Kim (Indiana University SICE)
+        Sunwoo Kim, Mrinmoy Maity, and Minje Kim (2019), "Incremental Binarization On Recurrent Neural Networks for Single-Channel Source Separation," in Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Brighton, UK, May 12-17, 2019.
                 </p>
             </div>
             <div class="cell">
                 <h3>
-                    Overview
+                    Abstract
                 </h3>
-                <h4>
-                    <small><strong><em>Keeping the blue notes in the Blues</em></strong></small>
-                </h4>
                 <p>
-                    This page contains audio examples for our <a href="https://arxiv.org/pdf/1902.00956.pdf"><b>paper</b></a> on pitch correction of solo voice in a karaoke setting. The project got the attention of news outlets in the UK, as described in the <a href="https://sice.indiana.edu/news/story.html?story=SICE-student-uses-AI-to-improve-karaoke-results"> <b>SICE news release</b></a>.
-                    The proposed approach does not need a musical score: it predicts the amount of correction for each note from the relationship between the spectral contents of the vocal and accompaniment tracks. Hence, the pitch shift in cents suggested by the model can be used to make the voice sound in tune with the accompaniment. This approach differs from commercially used automatic pitch correction systems, where notes in the vocal tracks are shifted to be centered around notes in a user-defined score or mapped to the closest pitch among the twelve equal-tempered scale degrees. The proposed data-driven approach tries to preserve the nuanced variations of sung pitch while also estimating the amount of unintended pitch shift. This is particularly important in genres like Blues, where singers center their pitch far from the equal-tempered scale.
+    This paper proposes a Bitwise Gated Recurrent Unit (BGRU) network for the single-channel source separation task. Recurrent Neural Networks (RNN) require several sets of weights within its cells, which significantly increases the computational cost compared to the fully-connected networks. To mitigate this increased computation, we focus on the GRU cells and quantize the feedforward procedure with binarized values and bitwise operations. The BGRU network is trained in two stages. The real-valued weights are pretrained and transferred to the bitwise network, which are then incrementally binarized to minimize the potential loss that can occur from a sudden introduction of quantization. As the proposed binarization technique turns only a few randomly chosen parameters into their binary versions, it gives the network training procedure a chance to gently adapt to the partly quantized version of the network. It eventually achieves the full binarization by incrementally increasing the amount of binarization over the iterations. Our experiments show that the proposed BGRU method produces source separation results greater than that of a real-valued fully connected network, with 11-12 dB mean Signal-to-Distortion Ratio (SDR). A fully binarized BGRU still outperforms a Bitwise Neural Network (BNN) by 1-2 dB even with less number of layers.
                 </p>
                 <p>
-                    When training the model, we needed a large number of examples of out-of-tune performances with their in-tune counterparts. We used 4702 in-tune performances from <a href="https://www.smule.com/"><b>Smule, Inc</b></a> and shifted every note randomly by up to a semitone (100 cents). The program then learned to predict these shifts. On this page, we show results on validation examples: performances that the program was never trained on. However, these validation examples were also de-tuned using our random shift algorithm. For this reason, we also show results on real-world performances that we did not process in any way.
+    <a target="blank" href="BGRU_Paper.pdf">Link to paper</a>
                 </p>
                 <hr>
                 <table>
