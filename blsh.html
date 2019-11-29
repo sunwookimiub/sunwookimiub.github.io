@@ -70,19 +70,44 @@
                     Validation set
                 </h4>
                 <p>
-                    This first set of examples shows the model's predictions on a sample of our validation set of 500 performances. The de-tuned audio was synthesized from in-tune audio, making it possible for us to measure the accuracy of the predictions.
+                First paragraph.
                 </p>
                 <p>
-                    The audio examples are in groups of three. The first consists of an original, in-tune performance. The second is the de-tuned version that is input to the program. The third demonstrates the output of the program after applying the predicted corrections. The artifacts in the shifted audio are due to the use of a simple phase vocoder for pitch shifting and to the notes were not always parsed correctly. For example, a single note might be split into two different sections that are de-tuned independently, creating an unnatural discontinuity.
+                Second paragraph.
                 </p>
             </div>
         </div>
         <div class="grid-x grid-padding-x align-center">
-            <div class="cell small-4"><strong>Original (in-tune)</strong></div>
-            <div class="cell small-4"><strong>Detuned (input)</strong></div>
-            <div class="cell small-4"><strong>Corrected (output)</strong></div>
-            <div class="cell small-4">    <div class="maudio">      <audio src="images/autotuner_examples/test_mix_1.mp3" initaudio="false"></audio>      <div class="audio-control">          <a href="javascript:;" class="fast-reverse"></a>          <a href="javascript:;" class="play"></a>          <a href="javascript:;" class="fast-forward"></a>          <div class="progress-bar">              <div class="progress-pass"></div>          </div>          <div class="time-keep">              <span class="current-time">00:00</span> / <span class="duration">00:20</span>          </div>          <a class="mute"></a>          <div class="volume-bar">              <div class="volume-pass"></div>          </div>      </div>    </div></div>
-            <div class="cell small-4">    <div class="maudio">      <audio src="images/autotuner_examples/shifted_mix_1.mp3" initaudio="false"></audio>      <div class="audio-control">          <a href="javascript:;" class="fast-reverse"></a>          <a href="javascript:;" class="play"></a>          <a href="javascript:;" class="fast-forward"></a>          <div class="progress-bar">              <div class="progress-pass"></div>          </div>          <div class="time-keep">              <span class="current-time">00:00</span> / <span class="duration">00:20</span>          </div>          <a class="mute"></a>          <div class="volume-bar">              <div class="volume-pass"></div>          </div>      </div>    </div></div>
+            <div class="cell small-4"><strong>Original (clean)</strong></div>
+            <div class="cell small-4"><strong>Noisy Mixture (input)</strong></div>
+            <div class="cell small-4"><strong>Denoised (output)</strong></div>
+            
+            <div class="cell small-4">    
+                <div class="maudio">      
+                    <audio src="images/autotuner_examples/test_mix_1.mp3" initaudio="false"></audio>      
+                    <div class="audio-control">          
+                        <a href="javascript:;" class="fast-reverse"></a>          
+                        <a href="javascript:;" class="play"></a>          
+                        <a href="javascript:;" class="fast-forward"></a>          
+                        <div class="progress-bar">              
+                            <div class="progress-pass"></div>          
+                        </div>          
+                        <div class="time-keep">              
+                            <span class="current-time">00:00</span> / 
+                            <span class="duration">00:20</span>          
+                        </div>          
+                        <a class="mute"></a>          
+                        <div class="volume-bar">              
+                            <div class="volume-pass"></div>          
+                        </div>      
+                    </div>    
+                </div>
+            </div>
+
+            <div class="cell small-4">    
+                <div class="maudio">      
+                    <audio src="images/autotuner_examples/shifted_mix_1.mp3" initaudio="false"></audio>      
+                    <div class="audio-control">          <a href="javascript:;" class="fast-reverse"></a>          <a href="javascript:;" class="play"></a>          <a href="javascript:;" class="fast-forward"></a>          <div class="progress-bar">              <div class="progress-pass"></div>          </div>          <div class="time-keep">              <span class="current-time">00:00</span> / <span class="duration">00:20</span>          </div>          <a class="mute"></a>          <div class="volume-bar">              <div class="volume-pass"></div>          </div>      </div>    </div></div>
             <div class="cell small-4">    <div class="maudio">      <audio src="images/autotuner_examples/corrected_mix_1.mp3" initaudio="false"></audio>      <div class="audio-control">          <a href="javascript:;" class="fast-reverse"></a>          <a href="javascript:;" class="play"></a>          <a href="javascript:;" class="fast-forward"></a>          <div class="progress-bar">              <div class="progress-pass"></div>          </div>          <div class="time-keep">              <span class="current-time">00:00</span> / <span class="duration">00:20</span>          </div>          <a class="mute"></a>          <div class="volume-bar">              <div class="volume-pass"></div>          </div>      </div>    </div></div>
 
             <div class="cell small-4">    <div class="maudio">      <audio src="images/autotuner_examples/test_mix_2.mp3" initaudio="false"></audio>      <div class="audio-control">          <a href="javascript:;" class="fast-reverse"></a>          <a href="javascript:;" class="play"></a>          <a href="javascript:;" class="fast-forward"></a>          <div class="progress-bar">              <div class="progress-pass"></div>          </div>          <div class="time-keep">              <span class="current-time">00:00</span> / <span class="duration">00:21</span>          </div>          <a class="mute"></a>          <div class="volume-bar">              <div class="volume-pass"></div>          </div>      </div>    </div></div>
