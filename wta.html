@@ -1,0 +1,56 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Bitwise Recurrent Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/maudio.css">
+    <style type="text/css">
+        div.maudio .audio-control a.fast-reverse,
+        div.maudio .audio-control a.fast-forward,
+        div.maudio .audio-control .mute,
+        div.maudio .audio-control .volume-bar,
+        div.maudio .audio-control .time-keep {
+            display: none;
+        }
+        div.maudio {
+            padding-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <article class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell">
+    <h1>
+        Nearest Neighbor Search-Based Bitwise Source Separation Using Discriminant Winner-Take-All Hashing
+    </h1>
+                <p class="authors">
+                Sunwoo Kim, and Minje Kim. "Nearest Neighbor Search-Based Bitwise Source Separation Using Discriminant Winner-Take-All Hashing." arXiv preprint arXiv:1908.09799 (2019).
+                </p>
+            </div>
+            <div class="cell">
+                <h3>
+                    Abstract
+                </h3>
+                <p>
+                We propose an iteration-free source separation algorithm based on discriminant Winner-Take-All (WTA) hash codes, which is a faster, yet accurate alternative to a complex machine learning model for single-channel source separation in a resource-constrained environment. First, we improve the quality of the random permutation process in WTA hashing in a way that they can preserve the affinity of the original spectra in the hash code domain. To this end, we formulate a learning algorithm that gradually adds new random permutations to the existing hash function as an adaptive basis function model. As a result, the more discriminant WTA hashing encodes the shape of a multidimensional audio spectrum to a reduced bitstring representation. Therefore, a nearest neighbor search using the hash code of an incoming noisy spectrum as the query string results in the closest matches among the hashed mixture spectra. Finally, using the indices of the matching frames, we obtain the corresponding ideal binary mask vectors for denoising. Since both the training data and the search operation are bitwise, the procedure can be done efficiently in hardware implementations. Experimental results show that the discriminant WTA hash codes provide an affordable dictionary search mechanism that leads to a competent performance compared to a comprehensive model and oracle masking.
+                </p>
+                <p>
+    <a target="blank" href="WTANNSS_Paper.pdf">Link to paper</a>
+                </p>
+                <hr>
+            </div>
+        </div>
+    </article>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="./js/maudio.js"></script>
+<script type="text/javascript">
+    maudio({
+        obj:'audio',
+        fastStep:10
+    })
+</script>
+
+
+</body></html>
