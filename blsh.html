@@ -1,48 +1,97 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CSS</title>
-<link href="personal website.css" rel="stylesheet" type="text/css" />
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Bitwise Recurrent Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/maudio.css">
+    <style type="text/css">
+        div.maudio .audio-control a.fast-reverse,
+        div.maudio .audio-control a.fast-forward,
+        div.maudio .audio-control .mute,
+        div.maudio .audio-control .volume-bar,
+        div.maudio .audio-control .time-keep {
+            display: none;
+        }
+        div.maudio {
+            padding-bottom: 1em;
+        }
+    </style>
 </head>
 
-<body id="research">
-<div class = "content_wrapper">
+<body>
 
-<div>
-<h1> Concatenative Sound Synthesis </h1>
+    <article class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell">
+    <h1>
+        Boosted Locality Sensitive Hashing: Discriminative Binary Codes for Source Separation
+    </h1>
+                <p class="authors">
+        Sunwoo Kim, Haici Yang, and Minje Kim (2019), "Boosted Locality Sensitive Hashing: Discriminative Binary Codes for Source Separation," in submission of the IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2020.
+                </p>
+            </div>
+            <div class="cell">
+                <h3>
+                    Abstract
+                </h3>
+                <p>
+                Speech enhancement tasks have seen significant improvements with the advance of deep learning technology, but with the cost of increased computational complexity. In this study, we propose an adaptive boosting approach to learning locality sensitive hash codes, which represent audio spectra efficiently. We use the learned hash codes for single-channel speech denoising tasks as an alternative to a complex machine learning model, particularly to address the resource-constrained environments. Our adaptive boosting algorithm learns simple logistic regressors as the weak learners. Once trained, their binary classification results transform each spectrum of test noisy speech into a bit string. Simple bitwise operations calculate Hamming distance to find the K-nearest matching frames in the dictionary of training noisy speech spectra, whose associated ideal binary masks are averaged to estimate the denoising mask for that test mixture. Our proposed learning algorithm differs from AdaBoost in the sense that the projections are trained to minimize the distances between the self-similarity matrix of the hash codes and that of the original spectra, rather than the misclassification rate. We evaluate our discriminative hash codes on the TIMIT corpus with various noise types, and show comparative performance to deep learning methods in terms of denoising performance and complexity.
+                </p>
+                <p>
+    <a target="blank" href="BLSH_Paper.pdf">Link to paper</a>
+                </p>
+                <hr>
+                <table>
+	<tbody><tr>
+		<td class="text-center">
+			<img src="knnproc.png" alt="" width="750" height="400">
+		</td>
+		<td class="text-center">
+			<img src="blshres.png" alt="" width="750" height="400">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<small><b>Fig 1.</b> 
+                KNN-based source separation process using LSH hash codes.
+            </small>
+		</td>
+		<td>
+			<small><b>Fig 2.</b> 
+                Self-affinity matrices of varying L hash codes and original time-frequency bins. 
+            </small>
+		</td>
+	</tr>
+</tbody></table>
+            </div>
+            <div class="cell">
+                <h3>
+                    Audio examples
+                </h3>
+                <h4>
+                    Validation set
+                </h4>
+                <p>
+                First paragraph.
+                </p>
+                <p>
+                Second paragraph.
+                </p>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell small-4"><strong>Original (clean)</strong></div>
+            <div class="cell small-4"><strong>Noisy Mixture (input)</strong></div>
+            <div class="cell small-4"><strong>Denoised (output)</strong></div>
+            
+            <audio conrtrols="">
+                <source src="blsh_demo/sibelius_target.wav" type="audio/wav">
+                Your browser does not support this audio format.
+            </audio>
 
-<p> Sanna Wager (Ph.D. student, Indiana University SoIC), Liang Chen (Ph.D. candidate, Indiana University SoIC), Minje Kim (Indiana University SoIC), Christopher Raphael (Indiana University SoIC)</p>
+            <!-- 
+                <audio src='blsh_demo/sample1_orig.wav' preload></audio>
+            -->
+        </div>
+    </article>
 
-<h2> Overview </h2> 
-
-<p> 
-This research aims to translate an expressive gesture performed on one musical instrument to another. The goal is to
-match the target instrument's gestures as closely as possible while preserving the natural characteristics of the source
-instrument. The synthesis is generated from a sequence of audio samples from a database of performances on the source instrument.
-Applications of this method include information retrieval using audio queries, source separation by humming/singing, 
-and humming-to-instrument synthesis.  
-
-</p>
-
-<h2> Violin-to-bassoon synthesis </h2>
-<p>
-A violin performance is synthesized on the bassoon with the goal of
-matching the violin's musical gestures. 
-The example below demonstrates the synthesis program applied to the opening of the 
-<a href="https://itunes.apple.com/us/album/absolute-sibelius-violin-concerto/id328298349"> Sibelius violin concerto</a>.
-The bassoon database was generated using recordings by a professional bassoonist (many thanks to Professor Kathleen McLean, professor of bassoon
-at the Indiana University Jacobs School of Music). For comparison, recordings are added of the 
-same bassoonist performing the Sibelius excerpt, imitating the violin's expressive gestures, and of a Garage Band synthesis of the same melody. </p>
-<h3> Target violin performance </h3>
-<audio controls>
-	<source src = "sibelius_target.wav" type = "audio/wav" />
-    Your browser does not support this audio format.
-</audio>
-
-</div>
-</body>
-</html>
-
-
+</body></html>
