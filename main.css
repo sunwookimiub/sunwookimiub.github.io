@@ -100,7 +100,7 @@ input, select, textarea {
 	}
 
 	h1 {
-		text-transform: lowercase;
+		/*text-transform: lowercase;*/
 	}
 
 	h2 {
