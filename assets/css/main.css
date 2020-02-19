@@ -1498,7 +1498,8 @@ input, select, textarea {
 
 	ul.link-list-news li {
 		/*border-top: solid 1px #ced0b7;*/
-		margin: 0.75em 0 0 20px;
+		margin: 0 0 0 20px;
+		/*margin: 0.75em 0 0 20px;*/
         list-style-type: square;
         padding-bottom: 20px;
 	}
