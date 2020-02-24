@@ -1595,9 +1595,10 @@ input, select, textarea {
 			}
 
 		#header nav {
-			position: relative;
+			position: absolute;
 			/*position: absolute;*/
-			right: 40px;
+			right: 2000px;
+			/*right: 40px;*/
 			top: 1px;
 			line-height: 84px;
 			/*text-transform: lowercase;*/
