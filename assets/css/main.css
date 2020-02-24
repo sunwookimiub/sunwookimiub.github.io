@@ -1597,7 +1597,7 @@ input, select, textarea {
 		#header nav {
 			position: absolute;
 			/*position: absolute;*/
-			right: 150px;
+			right: 300px;
 			/*right: 40px;*/
 			top: 1px;
 			line-height: 84px;
