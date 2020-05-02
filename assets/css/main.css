@@ -346,6 +346,7 @@ input, select, textarea {
 		.row > .col-12 {
 			width: 100%;
 			justify-content: center;
+            padding-left:5px;
 		}
 
 		.row > .off-12 {
