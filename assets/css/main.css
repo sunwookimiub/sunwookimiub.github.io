@@ -1683,6 +1683,14 @@ input, select, textarea {
 		padding: 4em 0;
 	}
 
+/*Icon*/
+    #icon {
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    }
+
 /* Copyright */
 
 	#copyright {
