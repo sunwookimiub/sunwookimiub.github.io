@@ -345,6 +345,7 @@ input, select, textarea {
 
 		.row > .col-12 {
 			width: 100%;
+			justify-content: center;
 		}
 
 		.row > .off-12 {
@@ -2053,3 +2054,4 @@ input, select, textarea {
 				}
 
 	}
+
