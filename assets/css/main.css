@@ -91,7 +91,7 @@ input, select, textarea {
 		background-color: #e3e9dc;
 		font-family: sans-serif;
 		color: #878e83;
-		letter-spacing: -1px;
+		letter-spacing: 0px;
 	}
 
 	h1, h2, h3, h4 {
